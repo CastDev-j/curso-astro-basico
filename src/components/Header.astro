@@ -1,0 +1,59 @@
+---
+import Rocket from "./icons/Rocket.astro"
+import Information from "./icons/Information.astro"
+import HistoryIcon from "./icons/HistoryIcon.astro"
+import {Counter} from "./Counter"
+---
+
+<header class="flex flex-col min-w-[100%]" transition:persist>
+  <div
+    class="flex flex-col items-center gap-4 lg:gap-4 min-w-[100%] py-8 px-4 lg:py-8 lg:px-4 bg-gray-900"
+  >
+    <h1 class="text-gray-50 text-3xl lg:text-5xl font-bold tracking-wider">
+      SpaceX launches 🚀
+    </h1>
+    <p class="text-sm text-gray-50/50">
+      All the information about SpaceX launches
+    </p>
+  </div>
+
+  <nav class="mx-8 my-4">
+    <ul
+      class="flex-col gap-4 md:gap-0 md:flex-row text-md font-medium text-center text-gray-500 rounded-lg shadow flex transition h-auto"
+    >
+      <li class="w-full focus-within:z-10">
+        <a
+          href="/"
+          class="flex flex-row items-center md:min-h-[80px]  justify-around w-full gap-8 p-4 text-gray-100 bg-gray-900 hover:bg-gray-900/80 border-gray-200 rounded-lg md:rounded-e-none focus:text-gray-900 focus:bg-gray-100 active focus:outline-none transition"
+          aria-current="page"
+          >
+          <Rocket class="size-8" />
+          Ultimos Lanzamientos</a
+        >
+      </li>
+      <li class="w-full focus-within:z-10">
+        <a
+          href="/404"
+          class="flex flex-row items-center md:min-h-[80px]  justify-around w-full gap-8 p-4 text-gray-100 bg-gray-900 hover:bg-gray-900/80 border-gray-200 rounded-lg md:rounded-none focus:text-gray-900 focus:bg-gray-100 active focus:outline-none transition"
+          >
+          <Information class="size-8"/>
+          Sobre el proyecto</a
+        >
+      </li>
+      <li class="w-full focus-within:z-10">
+        <a
+          href="/404"
+          class="flex flex-row items-center md:min-h-[80px]  justify-around w-full gap-8 p-4 text-gray-100 bg-gray-900 hover:bg-gray-900/80 border-gray-200 rounded-lg md:rounded-s-none  focus:text-gray-900 focus:bg-gray-100 active focus:outline-none transition"
+          >
+          <HistoryIcon class="size-8"/>
+          Los más viejos</a
+        >
+      </li>
+    </ul>
+  </nav>
+
+
+    <Counter client:visible/>
+
+
+</header>

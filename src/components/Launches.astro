@@ -1,0 +1,17 @@
+---
+import CardLaunch from "./CardLaunch.astro";
+import { type APISResponse } from "../types/api.ts";
+
+const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+
+const data = await res.json();
+
+---
+
+<div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+  {
+    data.map( (el:APISResponse) => (
+      <CardLaunch {...el} />
+    ))
+  }
+</div>

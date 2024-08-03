@@ -1,0 +1,14 @@
+---
+import Header from '../components/Header.astro';
+import Layout from '../layouts/Layout.astro';
+import ErrorComponent from '../components/ErrorComponent.astro';
+
+---
+
+<Layout title="Ejercicio Basico con Astro.">
+	<Header slot="header"/>
+	<main class="flex flex-col mx-8 my-4 gap-2">
+        <ErrorComponent />
+	</main>
+</Layout>
+

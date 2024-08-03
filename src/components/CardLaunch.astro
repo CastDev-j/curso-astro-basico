@@ -1,0 +1,36 @@
+---
+interface Props {
+  userId: number;
+  id: number;
+  title: string;
+  body: string;
+}
+
+const { userId, id, title, body } = Astro.props;
+const isOdd = id % 2 === 0;
+---
+
+<a
+  href=`/launch/${id}`
+  class="transition hover:scale-105 flex flex-col max-w-sm p-6 bg-white border border-gray-200 rounded-lg shadow hover:bg-gray-100 dark:bg-gray-900 dark:border-gray-700 dark:hover:bg-gray-800"
+>
+  <h2
+    class="mb-2 text-sm flex flex-row justify-between font-bold tracking-tight text-gray-900 dark:text-white/50"
+  >
+    <span>ID de Usuario:{userId}</span>
+    <span 
+    class:list={{
+    "text-green-300/70": isOdd,
+    "text-red-300/70": !isOdd
+    }}
+    >ID:{id}</span>
+  </h2>
+  <h5
+    class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white"
+  >
+    {title}
+  </h5>
+  <p class="flex font-normal justify-self-end text-gray-700 dark:text-gray-400">
+    {body}
+  </p>
+</a>
