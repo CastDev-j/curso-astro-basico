@@ -1,8 +1,4 @@
 
-# Ejercicio basico astro
-
-![Imagen Inicio Pagina](./image.png)
-
 
 | **Materia**                         | **Créditos** | **Modalidad**      | **Lunes** | **Martes** | **Miércoles** | **Jueves** | **Viernes** | **Sábado** | **Horas** |
 |-------------------------------------|--------------|--------------------|-----------|------------|---------------|------------|-------------|------------|-----------|
@@ -44,3 +40,11 @@
 - **Cálculo Vectorial** (Cadena: Cálculo Integral, Corequisito: Física General)
 - **Física General** (Corequisito)
 - **Investigación de Operaciones** (Cadena: Probabilidad y Estadística)
+
+
+
+
+
+# Ejercicio basico astro
+
+![Imagen Inicio Pagina](./image.png)
